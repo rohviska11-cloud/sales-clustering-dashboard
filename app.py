@@ -93,7 +93,7 @@ def load_matrices_from_url(url):
     """Unduh NPZ sekali, lalu cache selama aplikasi berjalan."""
     response = requests.get(url, timeout=(20, 300))
     response.raise_for_status()
-    archive = np.load(BytesIO(response.content), allow_pickle=False)
+    archive = np.load(BytesIO(response.content), allow_pickle=True)
     out = {k: archive[k] for k in archive.files if k != "product_code"}
     if "product_code" in archive.files:
         out["__product_code__"] = archive["product_code"].astype(str)
@@ -103,7 +103,7 @@ def load_matrices_from_url(url):
 def load_matrices_local(path, mtime):
     if not Path(path).exists():
         return {}
-    archive = np.load(path, allow_pickle=False)
+    archive = np.load(path, allow_pickle=True)
     out = {k: archive[k] for k in archive.files if k != "product_code"}
     if "product_code" in archive.files:
         out["__product_code__"] = archive["product_code"].astype(str)
