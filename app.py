@@ -183,6 +183,10 @@ st.markdown(
     .exec-card {background:#FFFEFB;border:1px solid #E7E2D8;border-left:4px solid #2A817A;border-radius:14px;padding:16px 18px;margin:8px 0;box-shadow:0 4px 13px rgba(27,42,74,.045);}
     .soft-note {background:#F0F3F1;border:1px solid #DCE6E1;border-radius:12px;padding:12px 15px;color:#405365;}
     @keyframes fadeIn {from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+    [data-testid="stMain"] h1, [data-testid="stMain"] h2, [data-testid="stMain"] h3,
+    [data-testid="stMain"] [data-testid="stWidgetLabel"] *,
+    [data-testid="stMain"] [data-testid="stRadio"] label *,
+    [data-testid="stMain"] [data-testid="stMetricLabel"] * {color:#0B1C30!important;}
     </style>
     """,
     unsafe_allow_html=True,
