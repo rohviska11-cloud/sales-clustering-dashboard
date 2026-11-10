@@ -193,22 +193,18 @@ st.markdown(
 .hero::after {content:"";position:absolute;right:-60px;top:-80px;width:280px;height:280px;border-radius:50%;
   background:radial-gradient(circle,rgba(217,119,6,.28),transparent 70%);pointer-events:none;}
 .hero-layout {position:relative;z-index:1;}
-
 /* 2. Kartu metrik: warna aksen beda tiap kolom */
 [data-testid="stMain"] [data-testid="stColumn"]:nth-child(1) div[data-testid="stMetric"] {border-top-color:#059669;}
 [data-testid="stMain"] [data-testid="stColumn"]:nth-child(2) div[data-testid="stMetric"] {border-top-color:#D97706;}
 [data-testid="stMain"] [data-testid="stColumn"]:nth-child(3) div[data-testid="stMetric"] {border-top-color:#477B9B;}
 [data-testid="stMain"] [data-testid="stColumn"]:nth-child(4) div[data-testid="stMetric"] {border-top-color:#B86F52;}
-
 /* 3. Grafik muncul halus, bayangan menebal saat disorot */
 div[data-testid="stPlotlyChart"] {animation:fadeIn .5s ease-out;transition:box-shadow .25s ease;}
 div[data-testid="stPlotlyChart"]:hover {box-shadow:0 10px 24px rgba(11,25,44,.10);}
-
 /* 4. Menu sidebar bergeser sedikit saat disorot */
 [data-testid="stSidebar"] [role="radiogroup"] > label {transition:all .2s ease;}
 [data-testid="stSidebar"] [role="radiogroup"] > label:hover:not(:has(input:checked)) {
   background:rgba(255,255,255,.13);transform:translateX(3px);}
-
 /* 5. Scrollbar tipis dan footer Streamlit disembunyikan */
 ::-webkit-scrollbar {width:8px;height:8px;}
 ::-webkit-scrollbar-thumb {background:#CBD5E1;border-radius:8px;}
