@@ -187,6 +187,7 @@ st.markdown(
     [data-testid="stMain"] [data-testid="stWidgetLabel"] *,
     [data-testid="stMain"] [data-testid="stRadio"] label *,
     [data-testid="stMain"] [data-testid="stMetricLabel"] * {color:#0B1C30!important;}
+    [data-testid="stMain"] .hero h1, [data-testid="stMain"] .hero h2 {color:#F5F2EB!important;}
     </style>
     """,
     unsafe_allow_html=True,
